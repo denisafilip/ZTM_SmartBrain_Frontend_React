@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react';
+import AuthService from "../AuthService";
 
 const Rank = () => {
     return (
         <Fragment>
             <div>
                 <div className="accent-black f3">
-                    {'Your current rank is...'}
+                    {'Your current entry count is...'}
                 </div>
                 <div className="accent-black f1">
-                    {'#5'}
+                    {AuthService.getCurrentUser().entries}
                 </div>
             </div>
         </Fragment>
